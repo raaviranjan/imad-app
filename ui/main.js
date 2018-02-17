@@ -19,7 +19,7 @@ img.onclick = function(){
 var button=document.getElementById("counter");
 button.onclick = function(){
   //create a request oblect
-  var request = new XMHttpRequest();
+  var request = new XMLHttpRequest();
   
   //capture the responce and store it in a variable
   request.onReadyStateChange = function(){
