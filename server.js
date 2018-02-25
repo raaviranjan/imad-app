@@ -78,6 +78,10 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
+var blog={
+    title:"blog2"
+};
+
 var counter=0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
@@ -93,11 +97,23 @@ app.get('/blog', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 
+app.get('/:blogName',function(req, res){
+    //blogName==blog-one
+    var blogName=req.params.blogName;
+    if(blogName.equals(blogOne))
+    {
+        res.send("blog2");
+    }
+    else
+    res.send("blog3");
+   
+});
+
 var names=[];
 app.get('/submit-name',function(req,res){ //URL=/submit-name?name=xxxxx
    //get the name from the request
    var name=req.query.name;
-   names.push(name)
+   names.push(name);
    //JSON
    res.send(JSON.stringify(names));
 });
