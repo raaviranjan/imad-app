@@ -17,8 +17,14 @@ img.onclick = function(){
 
 //blog content
 var heading = document.getElementById("blogHeading");
+var blog1 = document.getElementById("blog1");
+var blog2 = document.getElementById("blog2");
+var blog3 = document.getElementById("blog3");
+blog3.onclick = function(){
+  heading.innerHTML="blog3";  
+};
 
-heading.innerHTML="abcdfjklkjd";
+
 
 
 //button counter
@@ -61,7 +67,7 @@ submit.onclick= function(){
           if(request.status == 200){
               //capture the name and render it as a list
               var names=request.responseText;
-              names=JSON.parse(names)
+              names=JSON.parse(names);
               var list="";
               for (var i=0;i<names.length;i++){
                   list += "<li>" + names[i] + "</li>";
