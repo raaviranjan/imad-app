@@ -88,6 +88,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+//blog pages
+app.get('/blog', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
+});
+
 var names=[];
 app.get('/submit-name',function(req,res){ //URL=/submit-name?name=xxxxx
    //get the name from the request
