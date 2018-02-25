@@ -97,17 +97,7 @@ app.get('/blog', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 
-app.get('/:blogName',function(req, res){
-    //blogName==blog-one
-    var blogName=req.params.blogName;
-    if(blogName.equals(blogOne))
-    {
-        res.send("blog2");
-    }
-    else
-    res.send("blog3");
-   
-});
+
 
 var names=[];
 app.get('/submit-name',function(req,res){ //URL=/submit-name?name=xxxxx
