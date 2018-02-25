@@ -17,21 +17,9 @@ img.onclick = function(){
 
 //blog content
 var heading = document.getElementById("blogHeading");
-var blog1 = document.getElementById("blog1");
-var blog2 = document.getElementById("blog2");
-var blog3 = document.getElementById("blog3");
 
 heading.innerHTML="abcdfjklkjd";
 
-blog1.onclick = function(){
-    heading.innerHTML="blog1";
-};
-blog2.onclick = function(){
-    heading.innerHTML="blog2";
-};
-blog3.onclick = function(){
-    heading.innerHTML="blog3";
-};
 
 //button counter
 var button=document.getElementById("counter");
