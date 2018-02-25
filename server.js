@@ -78,10 +78,6 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
-var blog={
-    title:"blog2"
-};
-
 var counter=0;
 app.get('/counter',function(req,res){
    counter = counter + 1;
@@ -95,13 +91,6 @@ app.get('/', function (req, res) {
 //blog pages
 app.get('/blog', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
-});
-
-app.get('/blogOne',function(req, res){
-    //blogName==blog-one
-        res.send("blog2");
-    
-   
 });
 
 var names=[];
