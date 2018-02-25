@@ -17,12 +17,7 @@ img.onclick = function(){
 
 //blog content
 var heading = document.getElementById("blogHeading");
-var blog1 = document.getElementById("blog1");
-var blog2 = document.getElementById("blog2");
-var blog3 = document.getElementById("abc");
-blog3.onclick = function(){
-  heading.innerHTML="blog3";  
-};
+heading.innerHTML="gfchjjg";
 
 
 
