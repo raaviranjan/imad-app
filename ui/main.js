@@ -22,7 +22,7 @@ var blog2 = document.getElementById("blog2");
 var blog3 = document.getElementById("blog3");
 
 blog1.onclick = function(){
-    heading.innerHTML="blog1";
+    heading.innerHTML="blog1asdvdz";
 };
 blog2.onclick = function(){
     heading.innerHTML="blog2";
