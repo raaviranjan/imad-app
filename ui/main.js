@@ -18,7 +18,7 @@ img.onclick = function(){
 //blog content
 var heading = document.getElementById("blogHeading");
 var blog1 = document.getElementById("blog1");
-var blog2 = document.getElementById("blog2");
+var blog2 = document.getElementById("abc");
 var blog3 = document.getElementById("blog3");
 
 blog1.onclick = function(){
