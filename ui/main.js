@@ -21,6 +21,8 @@ var blog1 = document.getElementById("blog1");
 var blog2 = document.getElementById("blog2");
 var blog3 = document.getElementById("blog3");
 
+heading.innerHTML="abcdfjklkjd";
+
 blog1.onclick = function(){
     heading.innerHTML="blog1";
 };
