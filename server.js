@@ -14,40 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles={ 
-    'article-one':{
-        title: 'Article One | Ravi Ranjan',
-        heading: 'Article One',
-        date: 'Feb 16, 2017',
-        content:`<p>
-                        This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.
-                    </p>
-                    <p>
-                        This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.
-                    </p>
-                    <p>
-                        This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.This is content of my first article.
-                    </p>`
-    },
-    'article-two':{
-        title: 'Article Two | Ravi Ranjan',
-        heading: 'Article Two',
-        date: 'Feb 17, 2017',
-        content:`<p>
-                        This is content of my second article.
-                    </p>`
-    },
-    'article-three':{
-        title: 'Article Three | Ravi Ranjan',
-        heading: 'Article Three',
-        date: 'Feb 18, 2017',
-        content:`<p>
-                        This is content of my third article.
-                    </p>`
-    }
-};
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
@@ -128,7 +94,7 @@ app.get('/article/:articleName',function(req, res){
     //articleName==article-one
     var articleName=req.params.articleName;
     
-    pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function(err,result){
+    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
